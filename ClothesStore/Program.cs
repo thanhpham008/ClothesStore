@@ -90,6 +90,7 @@ namespace ClothesStore
 				Console.WriteLine("Size: " + clothe.Size.ToString());
 				Console.WriteLine("Buying price: " + clothe.BuyPrice.ToString());
 				Console.WriteLine("Selling price: " + clothe.SellPrice.ToString());
+				Console.WriteLine("Supplier: " + clothe.Supplier);
 				Console.WriteLine("Quantity: " + clothe.Quantity);
 				Console.WriteLine("Total money left in store: " + store.Money);
 
