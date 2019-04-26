@@ -7,7 +7,6 @@ namespace ClothesStore
 	{
 		static void Main(string[] args)
 		{
-			//Console.WriteLine("Hello World!");
 			var store = new Store();
 
 			var tShirt = new TShirt();
@@ -30,13 +29,6 @@ namespace ClothesStore
 			tShirt.Init(Type.TShirt, Color.Yellow, Size.Small);
 			store.Buy(tShirt, 1);
 
-			//store.Sell(tShirt);
-
-
-			//tShirt = new TShirt();
-			//tShirt.Init(6, 12, Type.TShirt, Color.Red);
-
-			//store.Clothes = store.Clothes.OrderBy(x => x.Type).ToList();
 			Console.WriteLine("Welcome to ClothesStore.");
 			PrintStoreStatus(store);
 
