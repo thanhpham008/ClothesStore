@@ -61,42 +61,45 @@ namespace ClothesStore
 		public Size Size { get; set; }
 		public int Quantity { get; set; }
 
-		public virtual void Init(Type type, Color color, Size size)
+		public Supplier Supplier { get; set; }
+
+		public virtual void Init(Type type, Color color, Size size, Supplier supplier)
 		{
 			Type = type;
 			Color = color;
 			Size = size;
+			Supplier = supplier;
 		}
 	}
 
 	public class TShirt : Clothes
 	{
-		public override void Init(Type type, Color color, Size size)
+		public override void Init(Type type, Color color, Size size, Supplier supplier = Supplier.SuperSills)
 		{
 			BuyPrice = 6;
 			SellPrice = 12;
-			base.Init(type, color, size);
+			base.Init(type, color, size, supplier);
 		}
 
 	}
 
 	public class DShirt : Clothes
 	{
-		public override void Init(Type type, Color color, Size size)
+		public override void Init(Type type, Color color, Size size, Supplier supplier = Supplier.SuperSills)
 		{
 			BuyPrice = 8;
 			SellPrice = 20;
-			base.Init(type, color, size);
+			base.Init(type, color, size, supplier);
 		}
 	}
 
 	public class Jean : Clothes
 	{
-		public override void Init(Type type, Color color, Size size)
+		public override void Init(Type type, Color color, Size size, Supplier supplier = Supplier.GreatTextile)
 		{
 			BuyPrice = 10;
 			SellPrice = 30;
-			base.Init(type, color, size);
+			base.Init(type, color, size, supplier);
 		}
 	}
 
@@ -120,5 +123,11 @@ namespace ClothesStore
 		Green = 2,
 		Yellow = 3,
 		Blue = 4
+	}
+
+	public enum Supplier
+	{
+		SuperSills = 1,
+		GreatTextile = 2
 	}
 }
